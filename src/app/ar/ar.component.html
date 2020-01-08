@@ -1,0 +1,18 @@
+<AbsoluteLayout id="arview">
+    <AbsoluteLayout id="bigView" background="red" width="4000" height="4000">
+        <Label text="TEST"></Label>
+    </AbsoluteLayout>
+    <ContentView id="arcontainer" height="100%" width="100%">
+        <AR
+            id="ar"
+            debugLevel="NONE"
+            trackingMode="IMAGE"
+            trackingImagesBundle="AR Resources"
+            (trackingImageDetected)="onImageDetected($event)"
+            (arLoaded)="arLoaded($event)"
+            detectPlanes="false"
+            showStatistics="false">
+        </AR>
+    </ContentView>
+    <Button text="GO BACK" (tap)="goBack()"></Button>
+</AbsoluteLayout>
